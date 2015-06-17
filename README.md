@@ -39,15 +39,15 @@ For test and train data respectively, the feature data (measurements) are read f
 3. Read the activity labels from the "activity_labels.txt" file.
 4.  If either of these files does not exist in the expected location, an error message is printed and the script will exit.
 ### Creating a data table containing all the data to manipulate
-5. For each of the test and train datasets the subject ids and the activity ids (y values) are added as column 1 and 2 of the data frame.
-6. The two data frames are then combined by adding all the rows of the train data frame to the test dataframe into a single new data frame (named "dataset")
-7. Convert the frame to a table for easier manipulation
+1. For each of the test and train datasets the subject ids and the activity ids (y values) are added as column 1 and 2 of the data frame.
+2. The two data frames are then combined by adding all the rows of the train data frame to the test dataframe into a single new data frame (named "dataset")
+3. Convert the frame to a table for easier manipulation
 ### Use more descriptive labels for activities and variable (column) names for the feature data
-8. The activity ids are then replaced by the more descriptive activity labels which were read from the activity_labels.txt file
-9. Use the 561 feature names as the variable names for the variable values contained from column 3 to the end of the data frame.
-10. It was found some feature names were duplicated, so these names are made unique by simply appending the index of the column in which it originally appeared in the X file to the name.
+1. The activity ids are then replaced by the more descriptive activity labels which were read from the activity_labels.txt file
+2. Use the 561 feature names as the variable names for the variable values contained from column 3 to the end of the data frame.
+3. It was found some feature names were duplicated, so these names are made unique by simply appending the index of the column in which it originally appeared in the X file to the name.
 ### Select the relavant variable data
-11. Select all variable columns relating to either the mean or the standard deviation of a time or frequency variable by selecting those columns containing either the string "mean" or "std" (The assumption is that a naming convention was adhered to)
-12. Make a narrow data set from the resulting data by adding a column for the "Feature" and its corresponding "Value" (the melt command was used for this)
-13. Calculate the mean for each Variable for each Subject and Activity combination in order to create the final "tidy" data set.
-14. Write the data table into the working directory using the "write.table" command.
+1. Select all variable columns relating to either the mean or the standard deviation of a time or frequency variable by selecting those columns containing either the string "mean" or "std" (The assumption is that a naming convention was adhered to)
+2. Make a narrow data set from the resulting data by adding a column for the "Feature" and its corresponding "Value" (the melt command was used for this)
+3. Calculate the mean for each Variable for each Subject and Activity combination in order to create the final "tidy" data set.
+4. Write the data table into the working directory using the "write.table" command.
