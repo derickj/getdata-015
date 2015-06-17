@@ -5,8 +5,7 @@ The repo contains an R script "run_Analysis.R" which reads the Samsumng data and
 a tidy data set as requested in the assignment.
 ## Using the script
 1. The source data can be uploaded from 
-```https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
-```
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 2. All files contained in the zip file should be extracted to the working directory
 where you intend to run the script, i.e. the directory "UCI HAR Dataset" containing the "test"
 and "train" sub folders should be located in your wokring directory.
@@ -21,4 +20,6 @@ The tidy data set is written into the working directory with the name "final.txt
 
 ## Reading the data
 The data set created can be read in R by the "read.table" command (use header=TRUE), e.g.
-```tidydata<-read.table("final.txt",header=TRUE)```
+```R
+tidydata<-read.table("final.txt",header=TRUE)
+```
