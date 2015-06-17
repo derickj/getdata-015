@@ -24,7 +24,6 @@ If either of the required input files is not found, the script will print an err
 ## Output
 The tidy data set is written into the working directory with the name "final.txt"
 
-## Reading the data
 The data set that was created can be read in R by the "read.table" command (use header=TRUE), e.g.
 ```R
 tidydata<-read.table("final.txt",header=TRUE)
@@ -47,15 +46,17 @@ For test and train data respectively, the feature data (measurements) are read f
 2. The two data frames are then combined by adding all the rows of the train data frame to the test dataframe into a single new data frame (named "dataset")
 3. Convert the frame to a table for easier manipulation
 
-### Use more descriptive labels for activities and variable (column) names for the feature data
+### Assign descriptive activity labels and variable (column) names
 
-1. The activity ids are then replaced by the more descriptive activity labels which were read from the activity_labels.txt file
-2. Use the 561 feature names as the variable names for the variable values contained from column 3 to the end of the data frame.
-3. It was found some feature names were duplicated, so these names are made unique by simply appending the index of the column in which it originally appeared in the X file to the name.
+1. The activity ids are replaced by the more descriptive activity labels which were read from the activity_labels.txt file
+2. Use the 561 time and frequency variable names from the "features.txt" file as the variable names for the columns of the feature vector (from column 3 to the end of the data frame).
+3. It was found some feature names were duplicated, so these names are made unique by simply appending the index of the column in which it originally appeared in the feature vector to the name.
 
-### Select the relavant variable data
+### Select the relevant variable data
 
-1. Select all variable columns relating to either the mean or the standard deviation of a time or frequency variable by selecting those columns containing either the string "mean" or "std" (The assumption is that a naming convention was adhered to)
+1. Select all variable columns relating to either the mean or the standard deviation of a time or frequency variable by selecting those columns containing either the string "mean" or "std" (The assumption is that a naming convention was adhered to) (79 such column names exist)
 2. Make a narrow data set from the resulting data by adding a column for the "Feature" and its corresponding "Value" (the melt command was used for this)
-3. Calculate the mean for each Variable for each Subject and Activity combination in order to create the final "tidy" data set.
+
+### Calculate the means and write the output txt file
+3. Calculate the mean for each Variable for each Subject and Activity combination in order to create the final "tidy" data set.  (For each of the 30 subjects, for each of 6 activities, the means of the 79 variables selected above are calculated, resulting in a final data set of 14220 values, one for each combination of subject, activity and "feature" variable (30x6x79))
 4. Write the data table into the working directory using the "write.table" command.
