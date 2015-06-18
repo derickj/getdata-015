@@ -1,17 +1,17 @@
 Num | Name | Description
 --- | ------------------------------------------- | ----------------------------------------------------
 1 | Subject | The id of the subject who performed the activity for each window sample.
-| | This is an integer value from 1 to 30 (there were 30 subjects participating in the study)
+|.| This is an integer value from 1 to 30 (there were 30 subjects participating in the study)
 2 | Activity | Activity performed by the subject at the moment the signal was captured.  
-| | This is a factor variable with the following 6 levels:
+|.| This is a factor variable with the following 6 levels:
 --- | ------------------------------------------- | ----------------------------------------------------
-| | WALKING
-| | WALKING_UPSTAIRS
-| | WALKING_DOWNSTAIRS
-| | SITTING
-| | STANDING
-| | LAYING
-| |
+|.| WALKING
+|.| WALKING_UPSTAIRS
+|.| WALKING_DOWNSTAIRS
+|.| SITTING
+|.| STANDING
+|.| LAYING
+||
 3 | Feature | The name of the time or frequency variable for whom the mean or std deviation was calculated in the original data set
 | | tBodyAcc-mean()-X | (Time domain Signal). Body acceleration signal, derivated by applying an additional low pass butterworth filter with a corner frequency of 30Hz to the tAcc value. Mean estimated from the signals on the 'X' axis.
 4 | mean(Value) | The calculated mean of the feature variable named in "Feature" across all observations in the original data set for the row's Subject-Activity pair
