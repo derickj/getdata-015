@@ -12,10 +12,13 @@ readfname<-function(directory,fname) {
     }
     print (inpfile)
     data<-read.table(inpfile)
+##  print (dim(data))
+##  data
 }
 
 ## Load the libraries used in the script
 library(Hmisc)
+library(reshape2)
 library(plyr)
 library(dplyr)
 
@@ -28,15 +31,6 @@ trainY<-readfname("UCI HAR Dataset/train","y_train.txt")
 trainSubject<-readfname("UCI HAR Dataset/train","subject_train.txt")
 features<-readfname("UCI HAR Dataset","features.txt")
 activityLabels<-readfname("UCI HAR Dataset","activity_labels.txt")
-
-## During exploratory analysis, the dimensions were reported to investigate the data, no longer used
-## print(dim(testX))
-## print(dim(testY))
-## print(dim(testSubject))
-## print(dim(trainX))
-## print(dim(trainY))
-## print (dim(trainSubject))
-## print (dim(activityLabels))
 
 ## Create a data frame with the subject and activity ids 
 ## the two leftmost columns for each of test and train data sets
@@ -72,7 +66,7 @@ narrow<-melt(meanAndStdTab,1:2,variable.name="Feature",value.name="Value")
 
 ## Calculate the mean of each feature by Subject and Activity
 grouped<-group_by(narrow,Subject,Activity,Feature)
-inal<-summarize(grouped,mean(Value))
+final<-summarize(grouped,mean(Value))
 
 ## Generate the output file
 write.table(final,"final.txt",row.name=FALSE)
