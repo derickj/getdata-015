@@ -3,7 +3,7 @@
 ## name.  It then tests if the file exists - if not, an error message is displayed and the script is terminated
 ## If the file exists, the data is read using the read.table command and a data frame containing the data
 ## is returned
-##
+## 
 readfname<-function(directory,fname) {
     inpfile<-file.path(directory,fname)
     if(!file.exists(inpfile)) {

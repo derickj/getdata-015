@@ -100,7 +100,7 @@ The tidy data set contains 4 variables (The first 3 describe the Subject and Act
 ## Variables Present in the Dataset
  
 Num | Name | Description
---- | ------------------------------------------- | ----------------------------------------------------
+--- | ------------------------------------------------ | --------------------------------------------------
 1 | Subject | The id of the subject who performed the activity for each window sample.
 .|.| This is an integer value from 1 to 30 (there were 30 subjects participating in the study)
 2 | Activity | Activity performed by the subject at the moment the signal was captured.  
