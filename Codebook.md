@@ -193,7 +193,7 @@ Num | Name | Description
 .| fBodyBodyGyroJerkMag-mean() 
 .| fBodyBodyGyroJerkMag-std() |
 .| fBodyBodyGyroJerkMag-meanFreq() |
-4 | mean(Value) | The calculated mean of the feature variable named in "Feature" across all observations in the original data set for the row's Subject-Activity pair
+4 | mean(Value) | The calculated mean of the feature variable named in "Feature" across all observations in the original data set for the row's Subject-Activity pair.  The original vector contained normalised values between -1.0 and 1.0, hence the resulting mean of a set of such estimated values is also a real value in the same range.
 
 
 ##Sources
