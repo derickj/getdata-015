@@ -23,11 +23,11 @@ source("run_Analysis.R")
 ## Output
 If either of the required input files is not found, the script will print an error message and exit
 
-The tidy data set is written into the working directory with the name "final.txt"
+The tidy data set is written into the working directory with the name "tidy_data.txt"
 
 The data set that was created can be read in R by the "read.table" command (use header=TRUE), e.g.
 ```R
-tidydata<-read.table("final.txt",header=TRUE)
+tidydata<-read.table("tidy_data.txt",header=TRUE)
 ```
 
 ## run_Analysis.R Script's Operation
@@ -61,4 +61,4 @@ For test and train data respectively, the feature data (measurements) are read f
 ### Calculate the means and write the output text file
 
 3. Calculate the mean for each Variable for each Subject and Activity combination in order to create the final "tidy" data set.  (For each of the 30 subjects, for each of 6 activities, the means of the 79 variables selected above are calculated, resulting in a final data set of 14220 values, one for each combination of subject, activity and "feature" variable (30x6x79))
-4. Write the data table into the working directory using the "write.table" command.
+4. Write the data table into the working directory using the "write.table" command to a file name "tidy_data.txt".

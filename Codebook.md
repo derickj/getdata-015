@@ -1,7 +1,7 @@
 ---
-# title: "Codebook for Getting and Cleaning Data Course Project Final Data Set"
-## author: "derickj"
-## date: "18 June 2015"
+# Codebook for Getting and Cleaning Data Course Project Final Data Set
+## Author: "derickj"
+## Date: "18 June 2015"
 ---
  
 ## Project Description
@@ -9,7 +9,7 @@ The purpose of this project is to demonstrate the student's ability to collect, 
 
 The project uses as input a data set consisting of data collected from the accelerometers from the Samsung Galaxy S smartphone.
 
-##Study design and data processing
+##Study Design and Data Processing
 
 The data linked to from the course website represent data collected from. A full description of the study design and data processing is available at the site where the data was obtained:
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones 
@@ -29,64 +29,64 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
-tBodyAcc-XYZ
-tGravityAcc-XYZ
-tBodyAccJerk-XYZ
-tBodyGyro-XYZ
-tBodyGyroJerk-XYZ
-tBodyAccMag
-tGravityAccMag
-tBodyAccJerkMag
-tBodyGyroMag
-tBodyGyroJerkMag
-fBodyAcc-XYZ
-fBodyAccJerk-XYZ
-fBodyGyro-XYZ
-fBodyAccMag
-fBodyAccJerkMag
-fBodyGyroMag
-fBodyGyroJerkMag
+- tBodyAcc-XYZ
+- tGravityAcc-XYZ
+- tBodyAccJerk-XYZ
+- tBodyGyro-XYZ
+- tBodyGyroJerk-XYZ
+- tBodyAccMag
+- tGravityAccMag
+- tBodyAccJerkMag
+- tBodyGyroMag
+- tBodyGyroJerkMag
+- fBodyAcc-XYZ
+- fBodyAccJerk-XYZ
+- fBodyGyro-XYZ
+- fBodyAccMag
+- fBodyAccJerkMag
+- fBodyGyroMag
+- fBodyGyroJerkMag
 
 The set of variables that were estimated from these signals are: 
 
-mean(): Mean value
-std(): Standard deviation
-mad(): Median absolute deviation 
-max(): Largest value in array
-min(): Smallest value in array
-sma(): Signal magnitude area
-energy(): Energy measure. Sum of the squares divided by the number of values. 
-iqr(): Interquartile range 
-entropy(): Signal entropy
-arCoeff(): Autorregresion coefficients with Burg order equal to 4
-correlation(): correlation coefficient between two signals
-maxInds(): index of the frequency component with largest magnitude
-meanFreq(): Weighted average of the frequency components to obtain a mean frequency
-skewness(): skewness of the frequency domain signal 
-kurtosis(): kurtosis of the frequency domain signal 
-bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
-angle(): Angle between to vectors.
+- mean(): Mean value
+- std(): Standard deviation
+- mad(): Median absolute deviation 
+- max(): Largest value in array
+- min(): Smallest value in array
+- sma(): Signal magnitude area
+- energy(): Energy measure. Sum of the squares divided by the number of values. 
+- iqr(): Interquartile range 
+- entropy(): Signal entropy
+- arCoeff(): Autorregresion coefficients with Burg order equal to 4
+- correlation(): correlation coefficient between two signals
+- maxInds(): index of the frequency component with largest magnitude
+- meanFreq(): Weighted average of the frequency components to obtain a mean frequency
+- skewness(): skewness of the frequency domain signal 
+- kurtosis(): kurtosis of the frequency domain signal 
+- bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
+- angle(): Angle between to vectors.
 "
  
-##Creating the tidy datafile
-The purpose of the project was to create a tidy datafile from the above mentioned data set, consisting only of the means of the features relating to mean value (mean()) and standard deviation (std()) of the above mentioned estimated variable set.  The tidy data set needs to conform to the criteria for a tidy data set as described in Wickham's paper ([2]):
+## Creating the Tidy Datafile
+The purpose of the project is to create a tidy datafile from the above mentioned data set, consisting only of the means of the features relating to mean value (mean()) and standard deviation (std()) of the above mentioned estimated feature set.  The tidy data set needs to conform to the criteria for a tidy data set as described in Wickham's paper ([2]):
 - Each variable forms a column
 - Each observation forms a row.
 - Each type of observational unit forms a table.
-As described in that paper, either a wide or narrow format of data is acceptable.  In the case of this project, the student selected to use a narrow format data set, i.e. each observation consists of the mean of the estimates in the original feature vector for a single mean() or std() feature for a single subject and activity pair.  (An equally valid tidy data set would have been to include the names of these features as variables in columns)
+
+As described in Wickham's paper, either a wide or narrow format of data is acceptable.  In the case of this project, the student selected to use a narrow format data set, i.e., each observation consists of the mean of the estimates in the original feature vector for a single mean() or std() feature for a single subject and activity pair.  (An equally valid tidy data set would have been to include the names of these features as variables in columns)
  
-###Guide to create the tidy data file
+###Guide to Create the Tidy Data File
 The README.md file in the same repo as this file describes in detail how the data is to be downloaded, extracted and analysed using the accompanying "run_Analysis.R" script.
 The script converts the input data set to the tidy data set described below.
  
-###Cleaning of the data
-See the README.md file for more detail on the data processing done to create the tidy data set.
+See the README.md file also for more detail on the data processing done to create the tidy data set.
  
-##Description of the variables in the tiny_data.txt file
+##Description of the Variables 
 The tidy data set contains 4 variables (The first 3 describe the Subject and Activity pair and a Feature variable name). The last variable is the value of the mean of all estimates of that feature for the specific subject-activity pair in the original (input) daatabase. 
 
 - There are 14220 rows of the above mentioned 4 variables in the resulting tidy data set (14220, 4)
-- The first few rows of the data set would look as follows:
+- The first few rows of the data set is the following:
 ```R
   Subject Activity           Feature mean(Value)
 1       1   LAYING tBodyAcc-mean()-X  0.22159824
@@ -97,7 +97,7 @@ The tidy data set contains 4 variables (The first 3 describe the Subject and Act
 6       1   LAYING  tBodyAcc-std()-Z -0.82606140
 ```
  
-## Variables present in the dataset
+## Variables Present in the Dataset
  
 Num | Name | Description
 --- | ------------------------------------------- | ----------------------------------------------------
