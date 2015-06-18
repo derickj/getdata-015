@@ -3,10 +3,10 @@ The Course Project repo for Getting and Cleaning Data course.
 ## Overview
 The repo contains:
 
-1. This "README.md" file providing a description of the usage and operation of the script
+1. This "README.md" file providing a description of the usage and operation of the script.
 2. An R script "run_Analysis.R" which reads the Samsung data and converts it to 
 a tidy data set as requested in the assignment.
-3. A file "Codebook.md" which describes the tidy data set produced by the script
+3. A file "Codebook.md" which describes the tidy data set produced by the script.
 
 ## Using the script
 1. Upload the source data from 

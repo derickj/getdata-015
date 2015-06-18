@@ -69,7 +69,7 @@ grouped<-group_by(narrow,Subject,Activity,Feature)
 final<-summarize(grouped,mean(Value))
 
 ## Generate the output file
-write.table(final,"final.txt",row.name=FALSE)
-print("Output file final.txt created")
+write.table(final,"tiny_data.txt",row.name=FALSE)
+print("Output file tiny_data.txt created")
 
 
